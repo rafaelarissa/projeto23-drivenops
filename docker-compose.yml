@@ -32,7 +32,7 @@ services:
     ports: 
       - 8080:80
     volumes: 
-      - build_react:var/www/html
+      - build_react:/var/www/html
     depends_on:
       - postgres_sorteador_db
       - node_sorteador_app
