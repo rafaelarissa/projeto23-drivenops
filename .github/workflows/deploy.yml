@@ -18,7 +18,7 @@ jobs:
           envkey_POSTGRES_DB: ${{secrets.POSTGRES_DB}}
           envkey_DATABASE_URL: ${{secrets.POSTGRES_URL}}
           directory: back-end/
-          FILE_NAME: .env
+          file_name: .env
           fail_on_empty: true
 
       - name: Create front-end env file
@@ -26,7 +26,7 @@ jobs:
         with:
           envkey_REACT_APP_BASE_URL: ${{secrets.REACT_APP_BASE_URL}}
           directory: front-end/
-          FILE_NAME: .env
+          file_name: .env
           fail_on_empty: true
 
       - name: Build
