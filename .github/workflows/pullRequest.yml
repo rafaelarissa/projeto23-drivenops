@@ -16,12 +16,5 @@ jobs:
           directory: back-end/
           file_name: .env.test
 
-      - name: Make a new envfile
-        uses: SpicyPizza/create-envfile@v1
-        with:
-          envkey_REACT_APP_BASE_URL: ${{secrets.REACT_APP_BASE_URL}}
-          directory: front-end/
-          file_name: .env.test
-
       - name: Run tests
         run: docker-compose -f docker-compose-test.yml run node_sorteador_app npm run test
